@@ -49,21 +49,17 @@ class BaseApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeBloc themeBloc = context.watch<ThemeBloc>();
-    return BlocBuilder<LanguageBloc, LanguageState>(
-      buildWhen: (previous, current) => true,
-      builder: (context, state) {
-        return MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          localizationsDelegates: context.localizationDelegates,
-          supportedLocales: context.supportedLocales,
-          locale: context.locale,
-          color: themeBloc.baseTheme.primary,
-          theme: themeBloc.baseTheme.themeData,
-          routeInformationProvider: AppRouter.router.routeInformationProvider,
-          routerDelegate: AppRouter.router.routerDelegate,
-          routeInformationParser: AppRouter.router.routeInformationParser,
-        );
-      },
+    return MaterialApp.router(
+      key: UniqueKey(),
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      color: themeBloc.baseTheme.primary,
+      theme: themeBloc.baseTheme.themeData,
+      routeInformationProvider: AppRouter.router.routeInformationProvider,
+      routerDelegate: AppRouter.router.routerDelegate,
+      routeInformationParser: AppRouter.router.routeInformationParser,
     );
   }
 }

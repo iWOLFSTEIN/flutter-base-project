@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:equatable/equatable.dart';
@@ -31,6 +33,6 @@ class LanguageBloc extends Bloc<LanguageEvent, LanguageState> {
     event.context.setLocale(event.language.locale);
     selectedLanguage = event.language;
     await _setLanguageUseCase(language: selectedLanguage);
-    emit(const ChangedLanguageState());
+    emit(ChangedLanguageState(stateId: Random().nextInt(10000)));
   }
 }
