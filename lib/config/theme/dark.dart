@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base_project/config/config.dart';
 import 'package:flutter_base_project/config/theme/base.dart';
 import 'package:flutter_base_project/core/constants/app_constants.dart';
 
@@ -24,6 +25,7 @@ class DarkTheme implements BaseTheme {
 
   @override
   late final ThemeData themeData = ThemeData(
+      fontFamily: Config.fontFamily,
       appBarTheme: AppBarTheme(
         backgroundColor: identity,
         titleTextStyle: TextStyle(

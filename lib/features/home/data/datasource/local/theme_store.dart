@@ -1,3 +1,4 @@
+import 'package:flutter_base_project/config/config.dart';
 import 'package:flutter_base_project/core/constants/app_constants.dart';
 import 'package:flutter_base_project/features/home/data/managers/local/local_storage.dart';
 
@@ -6,7 +7,7 @@ class ThemeStore {
   const ThemeStore(this._manager);
 
   String getTheme() {
-    return _manager.getString(key: AppConstants.theme) ?? AppConstants.light;
+    return _manager.getString(key: AppConstants.theme) ?? Config.defaultTheme;
   }
 
   Future<void> setTheme({required String theme}) async {

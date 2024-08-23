@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_base_project/config/config.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_base_project/config/languages/language_config.dart';
 import 'package:flutter_base_project/config/router/app_router.dart';
@@ -17,7 +18,7 @@ void main() async {
     runApp(EasyLocalization(
         assetLoader: CsvAssetLoader(),
         path: AppAssets.translations,
-        fallbackLocale: LanguageConfig.defaultLanguage.locale,
+        fallbackLocale: Config.defaultLanguage.locale,
         supportedLocales: LanguageConfig.locales,
         child: const MainApp()));
   } catch (e) {

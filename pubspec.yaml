@@ -31,3 +31,16 @@ flutter:
   assets:
     - assets/translations/
     - assets/icons/
+    - assets/fonts/
+    - assets/images/
+
+  fonts:
+    - family: Karla
+      fonts:
+      - asset: assets/fonts/Karla-ExtraLight.ttf
+      - asset: assets/fonts/Karla-Light.ttf
+      - asset: assets/fonts/Karla-Medium.ttf
+      - asset: assets/fonts/Karla-Regular.ttf
+      - asset: assets/fonts/Karla-Bold.ttf
+      - asset: assets/fonts/Karla-SemiBold.ttf
+      - asset: assets/fonts/Karla-ExtraBold.ttf

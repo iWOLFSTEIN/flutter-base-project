@@ -28,6 +28,11 @@ class AppConstants {
   static const double gap22Px = 22.0;
   static const double gap24Px = 22.0;
 
+  // Languages
+  static const String english = "english";
+  static const String urdu = "urdu";
+  static const String hindi = "hindi";
+
   // Local Storage keys
   static const String theme = 'theme';
   static const String language = 'language';

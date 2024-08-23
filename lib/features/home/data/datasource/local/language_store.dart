@@ -1,7 +1,7 @@
 import 'dart:convert';
 
+import 'package:flutter_base_project/config/config.dart';
 import 'package:flutter_base_project/config/languages/language.dart';
-import 'package:flutter_base_project/config/languages/language_config.dart';
 import 'package:flutter_base_project/core/constants/app_constants.dart';
 import 'package:flutter_base_project/features/home/data/managers/local/local_storage.dart';
 
@@ -13,7 +13,7 @@ class LanguageStore {
     final String? storedLanguage =
         _manager.getString(key: AppConstants.language);
     if (storedLanguage == null) {
-      return LanguageConfig.defaultLanguage;
+      return Config.defaultLanguage;
     }
     return Language.fromJson(jsonDecode(storedLanguage));
   }
